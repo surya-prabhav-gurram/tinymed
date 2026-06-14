@@ -1,7 +1,9 @@
 # TinyMed — On-Device Medical Image Classifier with Full Compression Pipeline
 
-**Stage 4 of a Qualcomm ML Engineer portfolio project.**
+**Stage 4 of a Qualcomm ML Engineer portfolio project.**  
 Demonstrates the full edge deployment lifecycle: train → compress → export → optimize → deploy to hardware.
+
+📱 **[Watch Demo on YouTube](https://youtube.com/shorts/02p279V6ozg?feature=share)**
 
 ---
 
@@ -29,6 +31,15 @@ PyTorch · ONNX · CoreML · TFLite · Android/Kotlin · MLflow · torch.profile
   utilization, and FLOP counts at each compression stage; generated HTML dashboard and
   TensorBoard trace for hardware-aware optimization analysis.
 ```
+
+---
+
+## Demo
+
+[![TinyMed Demo](https://img.youtube.com/vi/02p279V6ozg/maxresdefault.jpg)](https://youtube.com/shorts/02p279V6ozg?feature=share)
+
+> On-device chest X-ray classification running fully offline on Android.  
+> NORMAL detected at **99.9% confidence** in **114.8ms**. PNEUMONIA detected at **99.7% confidence** in **130.3ms**.
 
 ---
 
@@ -167,9 +178,8 @@ open logs/profiling_report.html
 3. Connect an Android device (API 27+) or start an emulator
 4. Build → Run
 
-The app runs entirely **offline** — no internet, no server, no API calls.
-TFLite inference uses the **NNAPI delegate** for Android NPU acceleration with
-CPU fallback via XNNPack.
+The app runs entirely **offline** — no internet, no server, no API calls.  
+TFLite inference uses the **NNAPI delegate** for Android NPU acceleration with CPU fallback via XNNPack.
 
 ---
 
@@ -207,6 +217,6 @@ let prediction = try model.prediction(input: inputTensor)
 
 ## Tech Stack
 
-PyTorch · ONNX (opset 17) · ONNX Runtime · CoreML Tools · TensorFlow Lite ·
-Android Studio · Kotlin · torch.quantization · torch.profiler · MLflow · fvcore ·
+PyTorch · ONNX (opset 17) · ONNX Runtime · CoreML Tools · TensorFlow Lite ·  
+Android Studio · Kotlin · torch.quantization · torch.profiler · MLflow · fvcore ·  
 NIH ChestX-ray14 / Kaggle Pneumonia Dataset
