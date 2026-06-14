@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Models (large binary files)
+models/*.pt
+models/exported/*.onnx
+models/exported/*.tflite
+models/exported/TinyMed.mlpackage
+
+# Dataset
+data/chest_xray/
+data/*.zip
+
+# MLflow
+mlruns/
+
+# Logs
+logs/profiler_traces/
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+
+# macOS
+.DS_Store

@@ -1,0 +1,32 @@
+# TinyMed — Python dependencies
+# Install: pip install -r requirements.txt
+
+# Core ML
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# Model compression & export
+onnx>=1.15.0
+onnxruntime>=1.16.0         # CPU inference
+
+# CoreML (macOS only)
+# coremltools>=7.1            # pip install coremltools (macOS required)
+
+# TensorFlow / TFLite conversion
+
+# Experiment tracking
+mlflow>=2.8.0
+
+# Profiling
+fvcore>=0.1.5               # Accurate FLOP counting
+tensorboard>=2.14.0
+
+# Data
+Pillow>=10.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Utils
+tqdm>=4.66.0
+rich>=13.0.0

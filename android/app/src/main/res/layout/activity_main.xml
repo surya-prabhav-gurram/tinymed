@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0E1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TinyMed"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#00D9FF"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On-Device Chest X-Ray Classifier"
+            android:textSize="12sp"
+            android:textColor="#6B7280"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Model Info Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#111827"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MODEL INFO"
+                android:textSize="9sp"
+                android:letterSpacing="0.15"
+                android:textColor="#6B7280"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_model_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#9CA3AF"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="4dp"/>
+        </LinearLayout>
+
+        <!-- X-Ray Image View -->
+        <ImageView
+            android:id="@+id/iv_xray"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="#111827"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_xray"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Select Image Button -->
+        <Button
+            android:id="@+id/btn_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="SELECT CHEST X-RAY"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:backgroundTint="#1F2937"
+            android:textColor="#00D9FF"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Disclaimer -->
+        <TextView
+            android:id="@+id/tv_disclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠ For research purposes only. Not a medical diagnosis tool."
+            android:textSize="10sp"
+            android:textColor="#F59E0B"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"/>
+
+        <!-- Run Inference Button -->
+        <Button
+            android:id="@+id/btn_run_inference"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="RUN ON-DEVICE INFERENCE"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.08"
+            android:backgroundTint="#00D9FF"
+            android:textColor="#0A0E1A"
+            android:layout_marginBottom="20dp"
+            android:enabled="false"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#00D9FF"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"/>
+
+        <!-- Result Card -->
+        <LinearLayout
+            android:id="@+id/card_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#111827"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLASSIFICATION RESULT"
+                android:textSize="9sp"
+                android:letterSpacing="0.15"
+                android:textColor="#6B7280"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_confidence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#E5E7EB"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_latency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#00D9FF"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1F2937"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
